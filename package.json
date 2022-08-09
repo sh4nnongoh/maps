@@ -1,6 +1,6 @@
 {
   "name": "a1",
-  "version": "0.1.1660045482492",
+  "version": "0.1.1660047788898",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
@@ -31,6 +31,7 @@
     "react-scripts": "5.0.1",
     "tailwindcss": "^3.1.8",
     "typescript": "^4.4.2",
+    "vercel": "^27.3.8",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
