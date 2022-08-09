@@ -1,0 +1,13 @@
+name: 60-minute-cron
+on:
+  schedule:
+    - cron: "*/60 * * * *"
+jobs:
+  cron:
+    runs-on: ubuntu-latest
+    environment: Production
+    steps:
+      - name: Build and Deploy Release Branch
+        run: |
+          curl --request POST \
+          --url '${{ secrets.DEPLOY_RELEASE }}'
