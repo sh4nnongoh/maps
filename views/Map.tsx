@@ -1,4 +1,3 @@
-import React from "react";
 import {
   LatLngBoundsExpression,
   LatLngExpression
@@ -8,16 +7,16 @@ import {
 } from "react-leaflet";
 import {
   CENTER, DEFAULT_ZOOM, MAX_BOUNDS_VISCOUSITY, ONE_MAP_BOUNDS
-} from "./constants";
-import Map from "./views/Map";
-const App = () => (
+} from "../utils/constants";
+import MapLayer from "../components/MapLayer";
+const Map = () => (
   <MapContainer
     center={[CENTER.x, CENTER.y] as LatLngExpression}
     zoom={DEFAULT_ZOOM}
     maxBounds={ONE_MAP_BOUNDS as LatLngBoundsExpression}
     maxBoundsViscosity={MAX_BOUNDS_VISCOUSITY}
   >
-    <Map />
+    <MapLayer />
   </MapContainer>
 );
-export default App;
+export default Map;

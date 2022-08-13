@@ -1,0 +1,6 @@
+/* eslint-disable react/jsx-props-no-spreading */
+import "../styles/globals.css";
+import "leaflet/dist/leaflet.css";
+import type { AppProps } from "next/app";
+const MyApp = ({ Component, pageProps }: AppProps) => <Component {...pageProps} />;
+export default MyApp;
