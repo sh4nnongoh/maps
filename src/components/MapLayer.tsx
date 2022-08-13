@@ -6,7 +6,7 @@ import {
 } from "react-leaflet";
 import {
   ATTRIBUTION, MAX_ZOOM, MIN_ZOOM, ONE_MAP_BOUNDS, ONE_MAP_URL
-} from "../utils/constants";
+} from "../constants";
 const MapLayer = () => (
   <TileLayer
     attribution={ATTRIBUTION}

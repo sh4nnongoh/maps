@@ -2,7 +2,9 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 const Home: NextPage = () => {
-  const Map = dynamic(() => import("../views/Map"));
+  const Map = dynamic(() => import("../views/Map"), {
+    ssr: false
+  });
   return (
     <>
       <Head>

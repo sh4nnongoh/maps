@@ -7,7 +7,7 @@ import {
 } from "react-leaflet";
 import {
   CENTER, DEFAULT_ZOOM, MAX_BOUNDS_VISCOUSITY, ONE_MAP_BOUNDS
-} from "../utils/constants";
+} from "../constants";
 import MapLayer from "../components/MapLayer";
 const Map = () => (
   <MapContainer
