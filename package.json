@@ -1,6 +1,6 @@
 {
   "name": "a1",
-  "version": "0.1.1660382268186",
+  "version": "0.1.1660382405225",
   "private": true,
   "scripts": {
     "dev": "next dev",
