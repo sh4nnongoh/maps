@@ -7,4 +7,6 @@ export const CENTER = bounds(ONE_MAP_BOUNDS[0], ONE_MAP_BOUNDS[1]).getCenter();
 export const MAX_ZOOM = 18;
 export const MIN_ZOOM = 12;
 export const DEFAULT_ZOOM = 12;
+export const MAP_CLICK_ZOOM = 15;
 export const MAX_BOUNDS_VISCOUSITY = 1;
+export const ALT_TEXT_MAP_PRIMARY_PIN = "primary-pin";

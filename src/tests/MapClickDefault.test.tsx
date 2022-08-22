@@ -1,0 +1,22 @@
+import React from "react";
+import { render, screen, waitFor } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import App from "../pages";
+const userStory = `
+Given no inital state,
+When user navigates to the home page,
+and clicks on the map,
+Then user sees the primary pin
+`;
+describe(userStory, () => {
+  beforeEach(async () => {
+    render(<App />);
+    await waitFor(() => screen.findByText("Singapore Land Authority"));
+  });
+  it("shows the primary pin only after user clicks on the map", async () => {
+    const map = screen.getByRole("presentation");
+    expect(screen.queryByAltText("primary-pin")).not.toBeInTheDocument();
+    userEvent.click(map as Element);
+    await waitFor(() => screen.findByAltText("primary-pin"));
+  });
+});
