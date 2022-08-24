@@ -15,5 +15,6 @@ describe(userStory, () => {
     const metaCollection = document.getElementsByTagName("meta");
     const descriptionMeta = getMetaDescription(0, (metaCollection as unknown) as HTMLMetaElement[]);
     expect(descriptionMeta).toEqual("A demo map app for demonstrating software techniques.");
+    await waitFor(() => screen.findByTestId("render-count-map-1"));
   });
 });

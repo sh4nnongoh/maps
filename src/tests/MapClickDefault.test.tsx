@@ -13,6 +13,10 @@ describe(userStory, () => {
     render(<App />);
     await waitFor(() => screen.findByText("Singapore Land Authority"));
   });
+  afterEach(async () => {
+    await waitFor(() => screen.findByTestId("render-count-map-1"));
+    await waitFor(() => screen.findByTestId("render-count-map-layer-1"));
+  });
   it("shows the primary pin only after user clicks on the map", async () => {
     const map = screen.getByRole("presentation");
     expect(screen.queryByAltText("primary-pin")).not.toBeInTheDocument();
